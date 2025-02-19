@@ -21,13 +21,7 @@ These logs come from Odido's "Klik en Klaar" interface at `192.168.1.1`.
 
 ## Overview
 
-`Parse_Klik_en_Klaar_logs` processes batches of router log files exported from the NR5307 (Klik & Klaar by Odido). It reads various `.log` files (and optionally `.txt` files) from a `syslog` folder and converts them into one or more CSV files organized by log type.  
-
-Common log types include:
-- `syslog`
-- `syslog.log.1` (which is still classified under the same `syslog` type)
-- `CM`, `FOTA`, `MMM` logs
-- and any other logs conforming to the defined patterns
+`Parse_Klik_en_Klaar_logs` processes batches of router log files exported from the NR5307 (Klik & Klaar by Odido). It reads various `.log` files (and optionally `.txt` files) from a `syslog` folder and converts them into one or more CSV files organized by log type.
 
 ---
 
@@ -38,7 +32,7 @@ Common log types include:
 - **Log Type Extraction**  
   Identifies log types from their filenames (e.g., `syslog.log` → `syslog`).
 - **CSV Output**  
-  Generates a separate CSV file for each log type in an `output` folder.
+  Generates a separate CSV file for each log type in an sequential `output` folder.
 - **Lightweight**  
   Single executable (or two source files) that quickly parse and reorder your log lines.
 
@@ -110,7 +104,7 @@ If you prefer to compile the code yourself rather than using the provided `.exe`
 
 Each log type (e.g., `syslog`, `fota`, `mmm`, etc.) will produce a separate CSV file inside an `output` directory:
 
-- **File name**: `output/<logtype>.csv`
+- **File name**: `output/<logtype>.csv`, `output(1)/<logtype>.csv`, etc
 - **Headers**: `Timestamp, Source, Log Level, Message, File`
 
   - **Timestamp** – Normalized to `MM/DD HH:MM:SS` if parsed from the log.
