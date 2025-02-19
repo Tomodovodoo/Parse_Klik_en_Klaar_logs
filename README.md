@@ -133,5 +133,4 @@ Timestamp,Source,Log Level,Message,File
 
 ### License
 
-This project is provided under the **GNU** license. See the LICENSE file (if included) or visit [GNU Licenses](https://www.gnu.org/licenses/) for more details.
-```
+This project is provided under the **GNU** license. See the LICENSE file  or visit [GNU Licenses](https://www.gnu.org/licenses/) for more details.
